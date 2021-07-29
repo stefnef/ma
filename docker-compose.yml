@@ -1,0 +1,23 @@
+version: "3"
+
+services:  
+  server:    
+    build:
+        context: .
+        dockerfile: DockerfileServer
+    command: ./app_bldServer configFileServer.json
+
+    ports:
+      - 8085:8085
+
+  client:
+    build:
+        context: .
+        dockerfile: DockerfileAccount
+    # run demo unit tests
+    command: go test -v blindSignAccount/main/model -run TestDemo.*
+
+    network_mode: host
+
+    depends_on:
+      - server

@@ -1,0 +1,12 @@
+FROM golang:1.11
+
+WORKDIR /go
+
+
+COPY lib/ src/
+COPY configFileServer.json configFileServer.json
+COPY blindSignAccount src/blindSignAccount
+COPY blindSignServer src/blindSignServer
+
+RUN go build -o app_bldServer blindSignServer/main/
+

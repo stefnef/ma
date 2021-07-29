@@ -1,0 +1,6 @@
+{
+  "name"            : "GCLOUD configuration",
+  "port"            : "8081",
+  "host"            : "",
+  "ginMode"         : "release"
+}

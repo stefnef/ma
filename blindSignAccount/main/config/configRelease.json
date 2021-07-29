@@ -1,0 +1,7 @@
+{
+  "name"            : "productive configuration",
+  "port"            : "8085",
+  "host"            : "localhost",
+  "ginMode"         : "release",
+  "resultDir"       : "/mnt/results/"
+}
